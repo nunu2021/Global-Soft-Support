@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Global Soft Support</title>
+</head>
+<body  style="height: 1000%;
+  background: radial-gradient(ellipse at bottom, #bacec1 0%, #bacec1 100%);
+  ">
+<div class="container">
+    <br><br>
+    <h1 class="mb-1" style="color: #1d3124"><%= article.title %></h1>
+    <div class="text-muted mb-2">
+        <%= article.createdAt.toLocaleDateString() %>
+    </div>
+    <div class="text-muted mb-2">
+        <%= article.description%>
+    </div>
+    <a href="/" class="btn btn-secondary">All Posts</a>
+<!--    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Reply</a>-->
+
+    <div class="mb-4">
+
+        <h1 class="text-right" style="color: #e59560"><%=article.markdown%></h1>
+
+    </div>
+</div>
+</body>
+</html>
+
