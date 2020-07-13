@@ -2,10 +2,11 @@ const express = require('express')
 const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
+require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/blog', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }).catch(e => console.log(e))
 app.set('view engine', 'ejs')
@@ -19,8 +20,8 @@ app.get('/', async (req, res) => {
 
 app.use('/articles',articleRouter)
 
-app.listen(5000)
-
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 
 
