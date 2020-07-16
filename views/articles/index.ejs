@@ -37,9 +37,9 @@
             <a href="articles/<%=article.slug%>" class="btn btn-primary">Read More</a>
             <a href="articles/edit/<%=article.id%>" class="btn btn-info">Reply</a>
 
-            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
+<!--            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">-->
+<!--                <button type="submit" class="btn btn-danger">Delete</button>-->
+<!--            </form>-->
         </div>
 
 
@@ -58,18 +58,19 @@
 <div class="space stars2"></div>
 <div class="space stars3"></div>
 <!--<img src="../articles/ibm.jpg"/>-->
-<button style="position:fixed;
+<button class="btn btn-danger"style="position:fixed;
     right: 50px;
     bottom: 50px;"><a  href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=000295e4-2cc2-470a-8fae-7947fefd60d4&serviceInstanceID=bb954dfb-1c95-417f-b9f3-d7b096b563e9">
         Talk
         with Me!
     </a></button>
 
-<button class="btn btn-info" style="position:fixed;
-    right: 50px;
-    top: 50px;"><a  href="/articles/instructions">
+<a class="btn btn-info" style="position:fixed;
+    right: 30px;
+    background-color: #e59560;
+    top: 30px;" href="/articles/instructions">
         How do<br> I use <br>this site?
-    </a></button>
+    </a>
 
 </body>
 </html>
