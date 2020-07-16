@@ -246,9 +246,10 @@
 
 <div class="container"  >
     <br>
-<div class = "mb-4">  <h1  style="color: #1d3124; font: bold 36px 'Cookie', cursive;" > <img style="width: 50px; height: 50px;" src="https://img.icons8.com/cotton/2x/globe.png"> Global Soft Support</h1></div>
+<div class = "mb-4">  <h1  style="color: #1d3124; font: bold 36px '.AppleSystemUIFont';" > <img style="width: 50px; height: 50px;" src="https://img.icons8.com/cotton/2x/globe.png"> Global Soft Support</h1></div>
 
     <a href="/articles/new" style="border-radius: 25px;" class="btn btn-success">New Post</a>
+    <br>
 
     <% articles.forEach(article => { %>
 
@@ -265,9 +266,9 @@
             <a href="articles/<%=article.slug%>" style="border-radius: 25px" class="btn btn-primary">Read More</a>
             <a href="articles/edit/<%=article.id%>" style="border-radius: 25px" class="btn btn-info">Reply</a>
 
-            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
+<!--            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">-->
+<!--                <button type="submit" class="btn btn-danger">Delete</button>-->
+<!--            </form>-->
         </div>
 
 
@@ -298,7 +299,7 @@
     right: 50px;
     background-color: #e59560;
     border-color: #e59560;
-    top: 50px;" href="/articles/instructions">
+    top: 40px;" href="/articles/instructions">
         How do<br> I Use <br>This Site?
     </a>
 <br>
