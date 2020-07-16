@@ -246,8 +246,8 @@
 
 <div class="container"  >
     <br>
+<div class = "mb-4">  <img style="width: 50px; height: 50px;" src="https://img.icons8.com/cotton/2x/globe.png"><h1  style="color: #1d3124; font: normal 36px 'Cookie', cursive;" > Global Soft Support</h1></div>
 
-    <h1 class = "mb-4" style="color: #1d3124" > <img src="https://img.icons8.com/cotton/2x/globe.png">.  Global Soft Support</h1>
     <a href="/articles/new" style="border-radius: 25px;" class="btn btn-success">New Post</a>
 
     <% articles.forEach(article => { %>
@@ -265,9 +265,9 @@
             <a href="articles/<%=article.slug%>" style="border-radius: 25px" class="btn btn-primary">Read More</a>
             <a href="articles/edit/<%=article.id%>" style="border-radius: 25px" class="btn btn-info">Reply</a>
 
-<!--            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">-->
-<!--                <button type="submit" class="btn btn-danger">Delete</button>-->
-<!--            </form>-->
+            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
 
 
@@ -305,8 +305,8 @@
 <footer class="footer-distributed">
 
     <div class="footer-left">
-        <img src="https://img.icons8.com/cotton/2x/globe.png">
-        <h3>About<span>Global Soft Support</span></h3>
+
+        <h3>About<br><span>Global Soft Support</span></h3>
 
         <p class="footer-links">
             <a href="#">Home</a>
