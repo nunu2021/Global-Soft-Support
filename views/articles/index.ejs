@@ -22,7 +22,7 @@
 <div class="container"  >
     <br>
     <h1 class = "mb-4" style="color: #1d3124" >Global Soft Support</h1>
-    <a href="/articles/new" style="border-radius: 25%;" class="btn btn-success">New Post</a>
+    <a href="/articles/new" style="border-radius: 25px;" class="btn btn-success">New Post</a>
 
     <% articles.forEach(article => { %>
 
@@ -36,8 +36,8 @@
 
             <div style="color: #e59560" class="card-text md-2"><%= article.description%></div>
             <br>
-            <a href="articles/<%=article.slug%>" class="btn btn-primary">Read More</a>
-            <a href="articles/edit/<%=article.id%>" class="btn btn-info">Reply</a>
+            <a href="articles/<%=article.slug%>" style="border-radius: 25px" class="btn btn-primary">Read More</a>
+            <a href="articles/edit/<%=article.id%>" style="border-radius: 25px" class="btn btn-info">Reply</a>
 
 <!--            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST" class="d-inline">-->
 <!--                <button type="submit" class="btn btn-danger">Delete</button>-->
@@ -60,17 +60,18 @@
 <div class="space stars2"></div>
 <div class="space stars3"></div>
 <!--<img src="../articles/ibm.jpg"/>-->
-<a class="btn btn-danger"style="position:fixed; border-radius: 25%;
+<a class="btn btn-success"style="position:fixed; border-radius: 25px;
     right: 50px;
     bottom: 50px;
-background-color: #1d3124" href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=000295e4-2cc2-470a-8fae-7947fefd60d4&serviceInstanceID=bb954dfb-1c95-417f-b9f3-d7b096b563e9">
+" href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=000295e4-2cc2-470a-8fae-7947fefd60d4&serviceInstanceID=bb954dfb-1c95-417f-b9f3-d7b096b563e9">
         Talk
         with Me!
     </a>
 
-<a class="btn btn-info" style=" border-radius: 25%; position:fixed;
+<a class="btn btn-info" style=" border-radius: 25px; position:fixed;
     right: 30px;
     background-color: #e59560;
+    border-color: #e59560;
     top: 30px;" href="/articles/instructions">
         How do<br> I use <br>this site?
     </a>
