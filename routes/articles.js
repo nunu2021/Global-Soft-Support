@@ -8,7 +8,7 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/instructions', (req, res) => {
-    res.render('articles/instructions', { article: new Article() })
+    res.render('articles/instructions')
 })
 
 router.get('/edit/:id', async (req, res) => {

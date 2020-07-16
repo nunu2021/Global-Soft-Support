@@ -18,6 +18,7 @@ app.get('/', async (req, res) => {
     res.render('articles/index', {articles: articles})
 })
 
+app.use(express.static("public"));
 app.use('/articles',articleRouter)
 
 const port = process.env.PORT || 3000;
