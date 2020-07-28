@@ -66,7 +66,7 @@ function getUserRooms(socket) {
 }
 
 
-app.use(express.static("public"));
+
 app.use('/articles',articleRouter)
 
 const port = process.env.PORT || 3000;
