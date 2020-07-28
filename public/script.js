@@ -3,7 +3,7 @@ const messageContainer = document.getElementById('message-container')
 const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
-
+alert("script is working, I am stoopid");
 if (messageForm != null) {
     const name = prompt('What is your name?')
     appendMessage('You joined')
