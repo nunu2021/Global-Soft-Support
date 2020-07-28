@@ -18,7 +18,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended : true})) // bruh it was false before chatrooms
 app.use(methodOverride('_method'))
 
-const rooms = { }
+const rooms = {Bullying: {}, DomesticViolence: {}, MentalDepression: {}, SexualAssault:{}, Other: {}}
 
 app.get('/', async (req, res) => {
     const articles = await Article.find().sort({createdAt: 'desc'})
@@ -58,6 +58,12 @@ io.on('connection', socket => {
         })
     })
 })
+function getUserRooms(socket) {
+    return Object.entries(rooms).reduce((names, [name, room]) => {
+        if (room.users[socket.id] != null) names.push(name)
+        return names
+    }, [])
+}
 
 
 app.use(express.static("public"));
@@ -68,9 +74,3 @@ app.listen(port);
 
 
 
-function getUserRooms(socket) {
-    return Object.entries(rooms).reduce((names, [name, room]) => {
-        if (room.users[socket.id] != null) names.push(name)
-        return names
-    }, [])
-}
