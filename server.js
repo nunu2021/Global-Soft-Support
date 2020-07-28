@@ -3,11 +3,12 @@ const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 
-const io = require('socket.io')(server)
+
 require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 const server = require('http').Server(app)
+const io = require('socket.io')(server)
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }).catch(e => console.log(e))
