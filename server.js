@@ -8,8 +8,8 @@ require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-const io = window.io = require('socket.io-client');
+const io = require('socket.io').listen(app)
+// const io = window.io = require('socket.io-client');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }).catch(e => console.log(e))
