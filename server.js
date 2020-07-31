@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-sup
 }).catch(e => console.log(e))
 app.set('views', './views')
 app.set('view engine', 'ejs')
-app.use(express.static('public'))
+app.use(express.static('public')) // lets me access files from public folder
 app.use(express.urlencoded({extended : true})) // bruh it was false before chatrooms
 app.use(methodOverride('_method'))
 
