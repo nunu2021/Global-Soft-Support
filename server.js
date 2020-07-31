@@ -7,11 +7,10 @@ const port = process.env.PORT || 3000;
 require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
-const server = require('http').Server(app).use((req, res) => res.sendFile(index, { root: HackTheLib }))
+const server = require('http').Server(app)
+    .use((req, res) => res.sendFile(index, { root: HackTheLib }))
     .listen(port, () => console.log(`Listening on ${port}`));
 const index = 'articles/index.ejs'
-
-
 
 const io = require('socket.io')(server)
 
