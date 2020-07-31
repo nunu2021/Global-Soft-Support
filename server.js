@@ -3,17 +3,13 @@ const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 
-const port = process.env.PORT || 3000;
+
 require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
 const server = require('http').Server(app)
-    .use((req, res) => res.sendFile(index, { root: HackTheLib }))
-    .listen(port, () => console.log(`Listening on ${port}`));
-const index = 'articles/index.ejs'
-
 const io = require('socket.io')(server)
-
+// const io = window.io = require('socket.io-client');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }).catch(e => console.log(e))
@@ -74,7 +70,7 @@ function getUserRooms(socket) {
 
 app.use('/articles',articleRouter)
 
-
+const port = process.env.PORT || 3000;
 app.listen(port);
 
 
