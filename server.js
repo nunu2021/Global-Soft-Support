@@ -10,8 +10,8 @@ const mongoose = require('mongoose')
 // const server = require('http').Server(app)
 const index = 'articles/index.ejs'
 const server = express()
-    .use((req, res) => res.sendFile(INDEX, { root: HackTheLib }))
-    .listen(PORT, () => console.log(`Listening on ${port}`));
+    .use((req, res) => res.sendFile(index, { root: HackTheLib }))
+    .listen(port, () => console.log(`Listening on ${port}`));
 const io = require('socket.io')(server)
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
