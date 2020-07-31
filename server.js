@@ -7,11 +7,12 @@ const port = process.env.PORT || 3000;
 require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
-// const server = require('http').Server(app)
-const index = 'articles/index.ejs'
-const server = express()
-    .use((req, res) => res.sendFile(index, { root: HackTheLib }))
+const server = require('http').Server(app).use((req, res) => res.sendFile(index, { root: HackTheLib }))
     .listen(port, () => console.log(`Listening on ${port}`));
+const index = 'articles/index.ejs'
+
+
+
 const io = require('socket.io')(server)
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
@@ -27,7 +28,7 @@ const rooms = {Bullying: {}, DomesticViolence: {}, MentalDepression: {}, SexualA
 
 app.get('/', async (req, res) => {
     const articles = await Article.find().sort({createdAt: 'desc'})
-    res.render('articles/index', {articles: articles})
+    res.render('articles/index', {articles: articles, rooms: rooms})
 })
 
 app.post('/room', (req, res) => {
