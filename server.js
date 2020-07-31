@@ -3,7 +3,7 @@ const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 
-
+const port = process.env.PORT || 3000;
 require('dotenv').config()
 const app = express()
 const mongoose = require('mongoose')
@@ -74,7 +74,7 @@ function getUserRooms(socket) {
 
 app.use('/articles',articleRouter)
 
-const port = process.env.PORT || 3000;
+
 app.listen(port);
 
 
