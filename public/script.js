@@ -1,4 +1,5 @@
-const socket = io('https://global-soft-support.herokuapp.com/')
+// const socket = io('https://global-soft-support.herokuapp.com/')
+var socket = io.connect('https://global-soft-support.herokuapp.com', {secure: true});
 const messageContainer = document.getElementById('message-container')
 const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('send-container')
