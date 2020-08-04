@@ -9,6 +9,7 @@ const app = express()
 const mongoose = require('mongoose')
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+server.listen(12345)
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/global-soft-support', {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
