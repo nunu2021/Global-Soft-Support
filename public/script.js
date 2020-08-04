@@ -1,4 +1,4 @@
-const socket = io('/')
+const socket = io('https://global-soft-support.herokuapp.com:12345')
 console.log("nunu is a genius")
 const messageContainer = document.getElementById('message-container')
 const roomContainer = document.getElementById('room-container')
