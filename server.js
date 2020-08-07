@@ -19,6 +19,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public')) // lets me access files from public folder
 app.use(express.urlencoded({extended : true})) // bruh it was false before chatrooms
 app.use(methodOverride('_method'))
+app.use(express.static('node_modules'));
 
 const rooms = {Bullying: {}, DomesticViolence: {}, MentalDepression: {}, SexualAssault:{}, Other: {}}
 
