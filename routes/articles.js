@@ -19,7 +19,7 @@ router.get('/edit/:id', async (req, res) => {
 router.get('/:slug', async (req, res) => {
     const article = await Article.findOne({slug : req.params.slug})
     if(article==null) res.redirect('/')
-res.render('articles/show', {article: article})
+    res.render('articles/show', {article: article})
 })
 
 router.post('/', async (req, res, next) => {
@@ -43,7 +43,7 @@ function saveArticleAndRedirect(path){
 
 
         let article = req.article
-            article.title= req.body.title,
+        article.title= req.body.title,
             article.description= req.body.description,
             article.markdown= req.body.markdown
 
@@ -67,7 +67,7 @@ function saveArticleAndRedirectEdit(path){
 
         let article = req.article
 
-            article.markdown= req.body.markdown
+        article.markdown= req.body.markdown
 
 
         try {

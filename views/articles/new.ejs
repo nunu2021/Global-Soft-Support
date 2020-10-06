@@ -1,9 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="https://img.icons8.com/cotton/2x/globe.png"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,18 +12,23 @@
   background: radial-gradient(ellipse at bottom, #bacec1 0%, #bacec1 100%);
   ">
 <div class="container">
-    <br>
-    <h1 class="mb-4" style="color: #1d3124">New Post</h1>
+    <br><br>
+    <h1 class="mb-1" style="color: #1d3124"><%= article.title %></h1>
+    <div class="text-muted mb-2">
+        <%= article.createdAt.toLocaleDateString() %>
+    </div>
+    <div class="text-muted mb-2">
+        <%= article.description%>
+    </div>
+    <a href="/" style="border-radius: 25px" class="btn btn-secondary">All Posts</a>
+    <!--    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Reply</a>-->
+    <br><br>
+    <div class="mb-4">
 
-    <form action="/articles" method="POST">
-        <%- include('_form_fields')%>
+        <h1 class="text-right" style="color: #e59560"><%=article.markdown%></h1>
 
-    </form>
-
-
-
-
+    </div>
 </div>
-
 </body>
 </html>
+
